@@ -8,6 +8,9 @@
 import { login } from '@/api/user'
 import SvgIcon from '@/components/SvgIcon/index.vue'
 
+let a: Nullable<number> = 111
+console.log(a)
+
 login({
   username: 'admin',
   password: '123456'

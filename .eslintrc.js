@@ -1,8 +1,11 @@
 module.exports = {
   root: true,
   env: {
-    browser: true,
-    node: true
+    node: true,
+    browser: true
+  },
+  globals: {
+    Nullable: 'readonly'
   },
   parser: 'vue-eslint-parser',
   parserOptions: {
