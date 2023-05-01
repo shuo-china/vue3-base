@@ -4,7 +4,7 @@
 
 - Vue3
 - Typescript
-- Tailwind CSS
+- Axios
 
 ## 推荐插件
 
@@ -12,7 +12,6 @@
 - ESLint
 - Prettier - Code formatter
 - Stylelint
-- Tailwind CSS IntelliSense
 - Vue Language Features (Volar)
 
 ## 开启 Commitlint
