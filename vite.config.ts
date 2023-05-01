@@ -1,11 +1,12 @@
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 // https://vitejs.dev/config/
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
   const root = process.cwd()
+  // const { VITE_USE_MOCK } = loadEnv(mode, root)
 
   return {
     resolve: {
@@ -16,15 +17,15 @@ export default defineConfig(() => {
         }
       ]
     },
-    server: {
-      proxy: {
-        '/api': {
-          target: 'http://www.kirinbdf.com',
-          changeOrigin: true,
-          rewrite: path => path.replace(/^\/api/, '')
-        }
-      }
-    },
+    // server: {
+    //   proxy: {
+    //     '/api': {
+    //       target: 'http://www.kirinbdf.com',
+    //       changeOrigin: true,
+    //       rewrite: path => path.replace(/^\/api/, '')
+    //     }
+    //   }
+    // },
     plugins: [
       vue(),
       createSvgIconsPlugin({

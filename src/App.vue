@@ -5,9 +5,13 @@
 </template>
 
 <script setup lang="ts">
+import { login } from '@/api/user'
 import SvgIcon from '@/components/SvgIcon/index.vue'
 
-fetch('/index.php/admin/areas')
+login({
+  username: 'admin',
+  password: '123456'
+})
 </script>
 
 <style lang="scss" scoped>
